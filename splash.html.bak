@@ -1,0 +1,124 @@
+
+	<ons-navigator id="splashnav" page="login.html"></ons-navigator>
+
+
+		<ons-template id="login.html">
+		<ons-page id="splashlogin">
+			<p style="margin-top: 30px;">
+			
+			<h2>Please sign in sto continue.</h2>
+			<div class="pytha">Pythagorum</div>
+			asdsa
+			<div><ons-input class="emailfield" placeholder="Email" float></ons-input></div>
+			<div><ons-input class="passfield" type="password" placeholder="Password" float></ons-input></div>
+
+			 <div><ons-button onclick="app.login()">Sign in</ons-button>
+			 <span class="small" onclick="splash.show('forgotemail')"> Forgot password? </span>
+			 </div>
+			</p>
+			
+			
+			<br><br>
+			<div>New User?
+			<br>
+			<ons-button onclick="splash.show('signup')">Register</ons-button>
+			</div>
+		</ons-page>
+		</ons-template>
+		
+		<ons-template id="signup.html">
+		<ons-page id="splashsignup">
+			<p style="margin-top: 60px;">
+			<h2>New User Signup</h2>
+			<div><ons-input placeholder="Email" float></ons-input></div>
+			<div><ons-input type="password" placeholder="Password" float></ons-input></div>
+			<div><ons-input type="password" placeholder="Retype Password" float></ons-input></div>
+			<div class="row stuonly">
+					<div class="col-sm-4">
+						<div class="input-group fg-float">
+							<span class="input-group-addon"><i class="zmdi"></i></span>
+							<div class="fg-line">
+								<label class="fg-label small">Credit Card #</label><input type="text" class="form-control" value="" name="addrstreet">
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="input-group fg-float">
+							<span class="input-group-addon"><i class="zmdi"></i></span>
+							<div class="fg-line">
+								<label class="fg-label small">Expiration</label><input type="text" class="form-control" value="" name="addrstreet">
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="input-group fg-float">
+							<span class="input-group-addon"><i class="zmdi"></i></span>
+							<div class="fg-line">
+								<label class="fg-label small">Security Code</label><input type="text" class="form-control" value="" name="addrstreet">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row stuonly">
+					<div class="col-sm-6">
+						<div class="input-group fg-float">
+							<span class="input-group-addon"><i class="zmdi"></i></span>
+							<div class="fg-line">
+								<label class="fg-label small">Name on Card</label><input type="text" class="form-control" value="" name="addrstreet">
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="input-group fg-float">
+							<span class="input-group-addon"><i class="zmdi"></i></span>
+							<div class="fg-line">
+								<label class="fg-label small">Street Address</label><input type="text" class="form-control" value="" name="addrstreet">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row stuonly">
+					<div class="col-sm-4">	
+						<div class="input-group fg-float">
+							<span class="input-group-addon"><i class="zmdi"></i></span>
+							<div class="fg-line">
+								<label class="fg-label small">City</label><input type="text" class="form-control" value="" name="addrcity">
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">	
+						<div class="input-group fg-float">
+							<span class="input-group-addon"><i class="zmdi"></i></span>
+							<div class="fg-line">
+								<label class="fg-label small">State</label><input type="text" class="form-control" value="" name="addrstate">
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">	
+						<div class="input-group fg-float">
+							<span class="input-group-addon"><i class="zmdi"></i></span>
+							<div class="fg-line">
+								<label class="fg-label small">Zip</label><input type="text" class="form-control" value="" name="addrzip">
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			  <ons-button onclick="user.create()">Register</ons-button>
+			  <ons-button onclick="splash.goback()">Cancel</ons-button>
+			</p>
+		</ons-page>
+		</ons-template>
+		
+		<ons-template id="forgotemail.html">
+		<ons-page id="splashforgotemail">
+			<p style="margin-top: 90px;">
+				<h2> Forgot password? Enter your email below to retrieve it.</h2>
+				<ons-input placeholder="Email" float></ons-input>
+				<div>
+				<ons-button onclick="app.login()">Send email</ons-button>
+				<ons-button onclick="splash.goback()">Cancel</ons-button>
+				</div>
+			</p>
+		</ons-page>
+		</ons-template>

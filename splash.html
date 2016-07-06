@@ -1,0 +1,99 @@
+
+	<ons-navigator id="splashnav" page="login.html"></ons-navigator>
+
+ 
+		<ons-template id="login.html">
+		<ons-page id="splashlogin">
+			<p style="margin-top: 30px;">
+			 <div class="logo"><img src="/img/logo.png" /></div>
+			
+			<div class="pytha">noodle</div>
+			<br>
+			<div><ons-input class="emailfield" placeholder="Email" float></ons-input></div>
+			<br>
+			<div><ons-input class="passfield" type="password" placeholder="Password" float></ons-input></div>
+			<ons-input class="remfield" type="checkbox" onchange='if(this.checked){ window.localStorage.setItem("rememberme", "1");}else{window.localStorage.setItem("rememberme", "0");}'></ons-input>
+
+			 <div style="margin-top:11px;"><ons-button  onclick="app.login()">Sign in</ons-button>
+			
+			 <div class="small forgot" onclick='ons.notification.prompt("Email address:", {title:"Forgot Password?"}) '
+			 xonclick="splash.show('forgotemail')"> Forgot password? </div>
+			 </div>
+			</p>
+			
+			
+			<br><br>
+			<div><h5>New User?</h5>
+			
+			<ons-button onclick="splash.show('signup')">Register Here</ons-button>
+			</div>
+		</ons-page>
+		</ons-template>
+		
+		<ons-template id="signup.html">
+		<ons-page id="splashsignup">
+			<p style="margin-top: 30px;">
+			<h2>New User Registration</h2>
+			<div class="reginput" ><ons-input id="regemail" placeholder="Email" float></ons-input></div>
+			<div class="reginput"><ons-input id="regpass" type="password" placeholder="Password" float></ons-input></div>
+			<div class="reginput"><ons-input id="regpass2" type="password" placeholder="Retype Password" float></ons-input></div>
+			<div class="row">
+					<div class="col-sm-12">
+						<div class="reginput"><ons-input id="regccn" type="number" placeholder="Credit Card #" float></ons-input></div>
+
+					</div>
+					<div class="col-sm-3">
+							
+					</div>
+					<div class="col-sm-3">
+						<div class="reginput">
+							<ons-input id="regexp" type="date" placeholder="Expiration Date"> </ons-input>
+						</div>
+					</div>
+					<div class="col-sm-3">
+							<div class="reginput"><ons-input id="regsec" type="number" placeholder="Security Code" float></ons-input></div>
+					</div>
+					<div class="col-sm-3">
+							
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="reginput"><ons-input id="regccname" type="text" placeholder="Name on Card" float></ons-input></div>
+					</div>
+					<div class="col-sm-6">
+						<div class="reginput"><ons-input id="regaddress" type="text" placeholder="Billing Address" float></ons-input></div>
+					</div>
+				</div>
+				<div class="xrow">
+					<div class="col-sm-4">	
+						<div class="reginput"><ons-input id="regcity" type="text" placeholder="City" float></ons-input></div>
+					</div>
+					<div class="col-sm-4">	
+						<div class="reginput"><ons-input id="regstate" type="text" placeholder="State" float></ons-input></div>
+					</div>
+					<div class="col-sm-4">	
+						<div class="reginput"><ons-input id="regzip" type="number" placeholder="Zipcode" float></ons-input></div>
+					</div>
+				</div>
+				
+			  <ons-button onclick="User.add()">Register</ons-button>
+			  <ons-button onclick="splash.goback()">Cancel</ons-button>
+			</p>
+		</ons-page>
+		</ons-template>
+		
+		<ons-template id="forgotemail.html">
+		<ons-page id="splashforgotemail">
+			<p style="margin-top: 90px;">
+				<h4> Forgot your password? <div class="small">Enter your email below to retrieve it.</div></h4>
+				<br>
+				<ons-input placeholder="Email" float></ons-input>
+				<br><br>
+				<div>
+				<ons-button onclick='ons.notification.alert("Done! Check your email")'>Send email</ons-button>
+				<ons-button onclick="splash.goback()">Cancel</ons-button>
+				</div>
+			</p>
+		</ons-page>
+		</ons-template>

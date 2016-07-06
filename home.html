@@ -1,0 +1,151 @@
+<ons-navigator id="homenav" >
+
+<ons-page>
+<ons-splitter >
+  <ons-splitter-side id="menu" collapse swipeable side="right" xpage="side.html">
+   <ons-page>
+   <div class="uemail"> </div>
+      <ons-list>
+        <ons-list-item onclick="" tappable>
+          Settings
+        </ons-list-item>
+		<ons-list-item onclick="" tappable>
+          Favorites
+        </ons-list-item>
+        <ons-list-item onclick="" tappable>
+          Billing
+        </ons-list-item>
+        <ons-list-item onclick="" tappable>
+          About
+        </ons-list-item>
+		<ons-list-item onclick="" tappable>
+          Rating
+        </ons-list-item>
+		 <ons-list-item onclick="app.logout()" tappable>
+          Logout
+        </ons-list-item>
+      </ons-list>
+    </ons-page>
+	</ons-splitter-side>
+
+  <ons-splitter-content ></ons-splitter-content>
+</ons-splitter>
+</ons-page>
+</ons-navigator>
+
+
+<ons-template id="side.html">
+  <ons-page>Side menu</ons-page>
+</ons-template>
+
+<ons-template id="student.html">
+<ons-page id="stuhome">
+ <ons-toolbar>
+    <div class="left">
+	
+      <ons-button modifier="large--quiet">
+        <ons-icon icon="md-chevron-left"></ons-icon>
+      </ons-button>
+    </div>
+    <div class="center">
+      <ons-icon icon="md-star"></ons-icon> <span class="pytht"> noodle</span> <ons-icon icon="md-star"></ons-icon>
+    </div>
+    <div class="right">
+      <div onclick="home.show('menu');"><ons-toolbar-button >
+        <ons-icon icon="md-menu"></ons-icon>
+      </ons-toolbar-button></div>
+    </div>
+  </ons-toolbar>
+	<div id="stucontent">
+	<div class="bigsearch">
+	<div class="lab">Search for a topic or subject</div>
+	<ons-input class="searchfield" placeholder="Algebra, Chemistry, Poetry, etc."></ons-input></div>
+	
+	<div class="sresults">
+		<ons-row class="row" >
+			<ons-col class="col-sm-4">Pre-Algebra</ons-col>
+			<ons-col class="col-sm-4">Algebra 1</ons-col>
+			<ons-col class="col-sm-4">Geometry</ons-col>
+		</ons-row>
+
+		<ons-row class="row">
+			<ons-col class="col-sm-4">Life Science</ons-col>
+			<ons-col class="col-sm-4">Physical Science</ons-col>
+			<ons-col class="col-sm-4">Biology</ons-col>
+		</ons-row>
+	
+	</div>
+	
+	<div class="pastsess">
+	<div class="lab">Past Sessions</div>
+	
+
+<ons-list>
+  
+  <ons-list-item><ons-row class="row"><ons-col class="col-sm-12">4/5/16 - Physics with "John Connor" <div> 24 minutes 18 seconds ($23) </div>  </ons-col></ons-row></ons-list-item>
+  
+   <ons-list-item><ons-row class="row"><ons-col class="col-sm-12">4/5/16 - Debate with "Ruth James" <div> 14 minutes 15 seconds ($23) </div>  </ons-col></ons-row></ons-list-item>
+   
+    <ons-list-item><ons-row class="row"><ons-col class="col-sm-12">4/5/16 - Music with "Drake Future" <div> 2 minutes 12 seconds ($23) </div>  </ons-col></ons-row></ons-list-item>
+	
+	 <ons-list-item><ons-row class="row"><ons-col class="col-sm-12">4/5/16 - Biology with "Bob Marley" <div> 56 minutes 17 seconds ($23) </div>  </ons-col></ons-row></ons-list-item>
+	 
+	  <ons-list-item><ons-row class="row"><ons-col class="col-sm-12">4/5/16 - Physics with "Albert Einsteinn" <div> 34 minutes 48 seconds ($23) </div>  </ons-col></ons-row></ons-list-item>
+  
+
+</ons-list>
+
+	</div>
+	
+	
+	<div class="onlinenow">
+	<div class="lab">Online Tutors</div>
+	
+	<ons-row class="row" >
+			<ons-col class="col-sm-4">
+		<img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-1/p100x100/1917194_10102926902635706_7039003399461581485_n.jpg?oh=73b676827bd599c6c28a7026ce40a422&oe=583320F9" class="img-circle img-responsive" >	</ons-col>
+		
+			<ons-col class="col-sm-4"><img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-1/p100x100/10511251_609983895766280_7164225936888496297_n.jpg?oh=533a46452e61b433dfd85ac1a4363f51&oe=57FADB4A" class="img-circle img-responsive" ></ons-col>
+			
+			<ons-col class="col-sm-4"><img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-1/c0.7.100.100/p100x100/1510823_10151822783306502_686599059_n.jpg?oh=3c7c1d5d9a383ae68bcfe81647025da9&oe=57FCA45D" class="img-circle img-responsive" ></ons-col>
+		</ons-row>
+
+		<ons-row class="row">
+			<ons-col class="col-sm-4"><img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-1/c10.0.100.100/p100x100/10329086_10102491807694263_5873696393417427250_n.jpg?oh=f54e9941dee4b7ac83e6faa06967848d&oe=57F332FE" class="img-circle img-responsive" ></ons-col>
+			
+			<ons-col class="col-sm-4"><img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-1/c0.12.100.100/p100x100/13423870_1101153339926963_9155299378835021685_n.jpg?oh=980dd8f02351bd64ec79a9f9049297ee&oe=5836B55D" class="img-circle img-responsive" ></ons-col>
+			
+			<ons-col class="col-sm-4"><img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-1/c37.37.460.460/s100x100/397384_102608959918448_1438781911_n.jpg?oh=40ce4ba49f81f6ba67bf07a86ee5adb2&oe=58097FF7" class="img-circle img-responsive" ></ons-col>
+		</ons-row>
+	</div>
+	</div>
+</ons-page>
+</ons-template>
+
+<ons-template id="tutor.html">
+<ons-page id="tuthome">
+ <ons-toolbar>
+    <div class="left">
+	
+      <ons-button modifier="large--quiet">
+        <ons-icon icon="md-chevron-left"></ons-icon>
+      </ons-button>
+    </div>
+    <div class="center">
+      <ons-icon icon="md-star"></ons-icon> <span class="pytht"> noodle</span> <ons-icon icon="md-star"></ons-icon>
+    </div>
+    <div class="right">
+      <div onclick="home.show('menu');"><ons-toolbar-button >
+        <ons-icon icon="md-menu"></ons-icon>
+      </ons-toolbar-button></div>
+    </div>
+  </ons-toolbar>
+	Welcome Home Tutor
+</ons-page>
+</ons-template>
+
+<ons-template id="session.html">
+<ons-page id="sessionhome">
+	Video session
+</ons-page>
+</ons-template>
